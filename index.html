@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio - Accueil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- Scroll fluide sans JS -->
+  <body style="scroll-behavior: smooth">
+    <header class="app-header" id="header">
+      <div class="logo">M.A.G</div>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">
+        ☰
+      </button>
+
+      <nav id="navMenu">
+        <a href="#home" class="nav-link active">Accueil</a>
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#skills" class="nav-link">Compétences</a>
+        <a href="#projects" class="nav-link">Projets</a>
+        <a href="#experience" class="nav-link">Expérience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero reveal" id="home">
+      <div class="hero-content">
+        <!-- Effet machine à écrire -->
+        <span class="welcome" id="typewriter-title"></span>
+
+        <h1 class="hero-subtitle">
+          <span id="typewriter-subtitle"></span>
+          <span id="typewriter-name" class="name-gradient"></span>
+        </h1>
+
+        <p>
+          Étudiant en 1re année de Bachelor Informatique à SUPINFO Lille,
+          passionné par l’informatique depuis le collège, je m’oriente vers les
+          réseaux, la cybersécurité et le développement web.
+        </p>
+
+        <div class="buttons">
+          <a href="#contact" class="btn primary">Me contacter</a>
+          <a href="#projects" class="btn outline">Voir mes projets</a>
+        </div>
+      </div>
+
+      <div class="profile-photo-wrapper">
+        <img
+          src="images/profile.jpg"
+          alt="Photo de profil"
+          class="profile-photo hero-image"
+        />
+        <div class="floating-square"></div>
+      </div>
+    </section>
+
+    <!-- ===================== À PROPOS ===================== -->
+    <section class="about reveal" id="about">
+      <h2 class="section-title">À Propos</h2>
+      <div class="section-line"></div>
+
+      <div class="about-container">
+        <div class="about-left">
+          <h3>Étudiant en Informatique</h3>
+          <p>
+            Étudiant en Bachelor Informatique à SUPINFO Lille, je suis passionné
+            par l’informatique depuis le collège, avec un intérêt particulier
+            pour le développement web, les réseaux et la cybersécurité.
+          </p>
+          <p>
+            Je développe des applications web modernes en frontend et backend,
+            tout en renforçant mes compétences en systèmes, réseaux et
+            télécommunications, avec l’objectif de devenir ingénieur en
+            informatique et de contribuer à la coopération technologique
+            franco-africaine.
+          </p>
+        </div>
+
+        <div class="about-right">
+          <div class="info-card reveal">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Localisation</strong>
+              <p>Lille 59000</p>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+              <strong>Formation</strong>
+              <p>SUPINFO Lille - Bachelor Informatique</p>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <i class="fas fa-briefcase"></i>
+            <div>
+              <strong>Disponibilité</strong>
+              <p>Mai jusqu'à fin août</p>
+            </div>
+          </div>
+
+          <div class="info-card reveal">
+            <i class="fas fa-globe"></i>
+            <div>
+              <strong>Langues</strong>
+              <p>Français (Courant)</p>
+              <p>Anglais (Élémentaire)</p>
+              <p>Arabe (Intermédiaire)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPÉTENCES ===================== -->
+    <section class="skills reveal" id="skills">
+      <h2 class="section-title">Compétences</h2>
+      <div class="section-line"></div>
+
+      <div class="skills-container">
+        <div class="skill-card reveal">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-list">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>ReactJS</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-list">
+            <span>Node.js</span>
+            <span>PHP</span>
+            <span>Python</span>
+            <span>Java</span>
+            <span>Strapi (API REST)</span>
+            <span>Tkinter</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><i class="fas fa-database"></i> Bases de données & Outils</h3>
+          <div class="skill-list">
+            <span>Git/GitHub</span>
+            <span>VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><i class="fas fa-network-wired"></i> Systèmes & Réseaux</h3>
+          <div class="skill-list">
+            <span>Linux</span>
+            <span>TCP/IP</span>
+            <span>DHCP</span>
+            <span>Hébergement web</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJETS ===================== -->
+    <section class="projects reveal" id="projects">
+      <h2 class="section-title">Mes Projets</h2>
+      <div class="section-line"></div>
+
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="personal">Personnel</button>
+        <button class="filter-btn" data-filter="school">Scolaire</button>
+      </div>
+
+      <div class="projects-container">
+        <!-- PROJET 1 -->
+        <div class="project-card reveal" data-type="personal">
+          <div class="project-image">
+            <img src="images/ecodeli.jpg" alt="Projet EcoDeli" />
+          </div>
+          <div class="project-badges">
+            <span class="badge type personal">PERSONNEL</span>
+          </div>
+
+          <div class="project-content">
+            <h3>BinaryMaths – Site web éducatif sur le système binaire</h3>
+            <p>
+              BinaryMaths est un site web éducatif conçu pour faciliter la
+              compréhension du système binaire. Il propose des cours clairs, des
+              exercices pratiques, un quiz interactif, ainsi qu’une barre de
+              recherche intelligente pour naviguer facilement dans tout le
+              contenu. Ce projet m’a permis de renforcer mes compétences en
+              HTML, CSS et JavaScript, tout en développant ma logique front-end
+              et ma capacité à concevoir une expérience utilisateur intuitive.
+            </p>
+
+            <div class="project-skills">
+              <span>HTML5</span>
+              <span>JavaScript</span>
+              <span>CSS3</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://amadoumahamat8-byte.github.io/SITE-BinaryMaths/"
+                class="btn primary"
+                target="_blank"
+                >Voir le projet</a
+              >
+              <a
+                href="https://github.com/amadoumahamat8-byte/SITE-BinaryMaths.git"
+                class="btn outline"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 2 -->
+        <div class="project-card reveal" data-type="school">
+          <div class="project-image">
+            <img src="images/drivncook.jpg" alt="Projet DrivnCook" />
+          </div>
+          <div class="project-badges">
+            <span class="badge type school">SCOLAIRE</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Mini-projet – Application web Cinéma</h3>
+            <p>
+              Développement d’un site web dynamique permettant de consulter des
+              films à l’affiche. Intégration de l’API OMDb pour récupérer les
+              données des films (recherche, détails). Création de 3 pages :
+              accueil (films tendances), recherche en temps réel, détails d’un
+              film. Recherche sans rechargement de page (JavaScript). Affichage
+              des posters, titres, résumés, genres et acteurs. Interface
+              responsive et accessible (mobile-first). Organisation du projet
+              avec Git/GitHub (branches, commits clairs). Utilisation d’un
+              serveur HTTP local (Live Server / npm).
+            </p>
+
+            <div class="project-skills">
+              <span>HTML5</span>
+              <span>JavaScript</span>
+              <span>CSS3</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://amadoumahamat8-byte.github.io/cinema-project/"
+                class="btn primary"
+                target="_blank"
+                >Voir le projet</a
+              >
+              <a
+                href="https://github.com/amadoumahamat8-byte/cinema-project.git"
+                class="btn outline"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 3 -->
+        <div class="project-card reveal" data-type="school">
+          <div class="project-image">
+            <img src="images/mario.jpg" alt="Projet Jeu Mario" />
+          </div>
+          <div class="project-badges">
+            <span class="badge type school">SCOLAIRE</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Mini-projet – Application Python Linux Monitoring</h3>
+            <p>
+              Développement d’une application Python 3 de monitoring Linux.
+              Collecte des métriques via /proc et /sys (CPU, mémoire, disques,
+              processus, réseau). Génération d’un rapport HTML5 responsive.
+              Interface graphique temps réel avec Tkinter. Gestion robuste des
+              erreurs (permissions, fichiers, commandes). Utilisation de la
+              ligne de commande (arguments, subprocess).
+            </p>
+
+            <div class="project-skills">
+              <span>Python</span>
+              <span>Shell</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Tkinter</span>
+              <span>Linux</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://github.com/amadoumahamat8-byte/SupKrellM.git"
+                class="btn outline"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 4 -->
+        <div class="project-card reveal" data-type="personal">
+          <div class="project-image">
+            <img src="images/jeu devinette.jpg" alt="Jeu Devinette" />
+          </div>
+          <div class="project-badges">
+            <span class="badge type personal">PERSONNEL</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Jeu Python (projet personnel)</h3>
+            <p>
+              Développement d’un jeu en Python pour expérimenter les boucles,
+              les conditions et la logique de programmation. Réalisation
+              personnelle permettant de mettre en pratique mes apprentissages et
+              d’améliorer ma créativité dans le code.
+            </p>
+
+            <div class="project-skills">
+              <span>HTML5</span>
+              <span>Python</span>
+              <span>CSS3</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://jeu-devinette-z4cy.onrender.com/"
+                class="btn primary"
+                target="_blank"
+                >Voir le projet</a
+              >
+              <a
+                href="https://github.com/amadoumahamat8-byte/JEU-DEVINETTE.git"
+                class="btn outline"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 5 -->
+        <div class="project-card reveal" data-type="school">
+          <div class="project-image">
+            <img src="images/YEARBOOK.jpg" alt="Projet Yearbook" />
+          </div>
+          <div class="project-badges">
+            <span class="badge type school">SCOLAIRE</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Projet Python “Yearbook”</h3>
+            <p>
+              Projet universitaire en Python visant à créer un outil de gestion
+              et d’affichage des données d’étudiants. Ce projet m’a permis de
+              découvrir la logique de programmation, la manipulation de fichiers
+              et la structuration de données. Renforcement de mes compétences en
+              algorithmique et en résolution de problèmes.
+            </p>
+
+            <div class="project-skills">
+              <span>HTML5</span>
+              <span>Python</span>
+              <span>CSS3</span>
+              <span>Autonomie</span>
+              <span>GitHub</span>
+              <span>Esprit d’analyse</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://github.com/amadoumahamat8-byte/PROJET-YEARBOOK.git"
+                class="btn outline"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 6 -->
+        <div class="project-card reveal" data-type="personal">
+          <div class="project-image">
+            <img src="images/calculatrice.jpg" alt="Application Calculatrice" />
+          </div>
+          <div class="project-badges">
+            <span class="badge type personal">PERSONNEL</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Application Calculatrice Web (PWA)</h3>
+            <p>
+              J’ai développé une calculatrice web moderne, responsive et facile
+              à utiliser sur ordinateur et mobile. Elle intègre un historique
+              des calculs, un mode clair/sombre et une gestion des erreurs.
+              L’application a été transformée en PWA pour pouvoir être installée
+              comme une vraie app. Ce projet montre mes compétences en HTML,
+              CSS, JavaScript et en déploiement web.
+            </p>
+
+            <div class="project-skills">
+              <span>HTML5</span>
+              <span>JavaScript</span>
+              <span>CSS3</span>
+              <span>PWA</span>
+              <span>GitHub</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://amadoumahamat8-byte.github.io/APP-CALCULATRICE/"
+                class="btn primary"
+                target="_blank"
+                >Voir le projet</a
+              >
+              <a
+                href="https://github.com/amadoumahamat8-byte/APP-CALCULATRICE.git"
+                class="btn outline"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 7 -->
+        <div class="project-card reveal" data-type="school">
+          <div class="project-image">
+            <img src="images/portofolio.jpg" alt="Projet Portfolio" />
+          </div>
+          <div class="project-badges">
+            <span class="badge type school">SCOLAIRE</span>
+          </div>
+
+          <div class="project-content">
+            <h3>Site e-commerce</h3>
+            <p>
+              Réalisation d’un site de vente en ligne dans le cadre d’un projet
+              universitaire. Conception des pages produits, panier, et espace
+              client. Développement en HTML, CSS, avec une logique de gestion
+              simplifiée des articles. Objectif : comprendre les bases du
+              commerce électronique et du design web.
+            </p>
+
+            <div class="project-skills">
+              <span>HTML5</span>
+              <span>Autonomie</span>
+              <span>CSS3</span>
+              <span>Esprit d’analyse</span>
+              <span>GitHub</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://amadoumahamat8-byte.github.io/Site-e-commerce/"
+                class="btn primary"
+                target="_blank"
+                >Voir le projet</a
+              >
+              <a
+                href="https://github.com/amadoumahamat8-byte/Site-e-commerce.git"
+                class="btn outline"
+                target="_blank"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPÉRIENCE ===================== -->
+    <section class="experience reveal" id="experience">
+      <h2 class="section-title">Expérience Professionnelle</h2>
+      <div class="section-line"></div>
+
+      <div class="experience-container">
+        <div class="experience-item reveal">
+          <div class="timeline">
+            <span class="timeline-dot"></span>
+          </div>
+
+          <div class="experience-card">
+            <h3>Technicien en Froid et Climatisation</h3>
+            <h4>chez Sewa CLIM</h4>
+            <span class="experience-date">juil. 2020 – avr. 2024</span>
+
+            <ul>
+              <li>Dépannage et maintenance d’équipements de climatisation.</li>
+              <li>Installation de systèmes dans des bâtiments neufs.</li>
+              <li>Diagnostic de pannes techniques.</li>
+              <li>Gestion du matériel et des pièces détachées.</li>
+              <li>Respect des normes de sécurité.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact reveal" id="contact">
+      <h2 class="section-title">Me Contacter</h2>
+      <div class="section-line"></div>
+
+      <p class="contact-intro">
+        Vous avez une idée, un projet ou simplement envie d’échanger ?<br />
+        Je suis disponible pour discuter, collaborer ou répondre à vos
+        questions.
+      </p>
+
+      <div class="contact-container">
+        <div class="contact-card reveal">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:amadoumahamat8@gmail.com"
+              >amadoumahamat8@gmail.com</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <strong>Téléphone</strong>
+            <a href="tel:+33651080654">+33 6 51 08 06 54</a>
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Adresse</strong>
+            <p>11 Rue Abélard, 59000 Lille</p>
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <i class="fab fa-github"></i>
+          <div>
+            <strong>GitHub</strong>
+            <a href="https://github.com/amadoumahamat8-byt" target="_blank">
+              github.com/amadoumahamat8-byt
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <i class="fab fa-linkedin"></i>
+          <div>
+            <strong>LinkedIn</strong>
+            <a
+              href="https://www.linkedin.com/in/amadou-mahamat-a795a1397"
+              target="_blank"
+            >
+              linkedin.com/in/amadou-mahamat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© 2026 M.A.G Tous droits réservés.</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

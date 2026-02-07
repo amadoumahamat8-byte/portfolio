@@ -1,0 +1,892 @@
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  padding-top: 64px; /* pour compenser le header fixe */
+}
+
+/* ===================== HEADER ===================== */
+
+.app-header {
+  height: 64px;
+  background: #020617;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.app-header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: orange;
+}
+
+/* NAV PRO STYLE + PUSH LEFT */
+.app-header nav {
+  margin-left: auto;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.app-header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+/* hover */
+.app-header nav a:hover {
+  color: orange;
+}
+
+/* active / clicked */
+.app-header nav a.active {
+  color: orange;
+}
+
+.app-header nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: orange;
+  border-radius: 2px;
+}
+
+/* MENU BUTTON (MOBILE) */
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===================== HERO ===================== */
+
+.hero {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+  background: radial-gradient(
+    circle at right,
+    rgba(255, 165, 0, 0.15),
+    transparent 40%
+  );
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.welcome {
+  color: orange;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  margin: 15px 0;
+}
+
+.highlight {
+  color: orange;
+}
+
+.hero p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* ===================== BUTTONS ===================== */
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: orange;
+  color: #020617;
+}
+
+.btn.primary:hover {
+  background: #ffb733;
+}
+
+.btn.outline {
+  border: 2px solid orange;
+  color: orange;
+  background: transparent;
+}
+
+.btn.outline:hover {
+  background: orange;
+  color: #020617;
+}
+
+/* ===================== IMAGE / PROFILE ===================== */
+
+/* L'image de profil (utilisée aussi comme .hero-image dans le HTML) */
+.profile-photo,
+.hero-image img {
+  width: 320px;
+  border-radius: 16px;
+  border: 4px solid orange;
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.9);
+  display: block;
+}
+
+/* ===================== ABOUT SECTION ===================== */
+
+.about {
+  padding: 100px 100px;
+  background: radial-gradient(circle at top, #020617, #000);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.section-line {
+  width: 60px;
+  height: 4px;
+  background: orange;
+  margin: 0 auto 60px;
+  border-radius: 4px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.about-left h3 {
+  color: orange;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-left p {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+/* ===================== RIGHT INFO CARDS ===================== */
+
+.about-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.info-card {
+  background: #020617;
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.info-card span {
+  font-size: 24px;
+}
+
+.info-card strong {
+  color: orange;
+  font-size: 15px;
+}
+
+.info-card p {
+  color: white;
+  font-size: 14px;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.35);
+}
+
+/* ===================== SKILLS SECTION ===================== */
+
+.skills {
+  padding: 100px 100px;
+  background: radial-gradient(circle at top, #020617, #000);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.skill-card {
+  background: #020617;
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.35);
+}
+
+.skill-card h3 {
+  color: orange;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* ===================== SKILL BUTTONS ===================== */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-list span {
+  background: transparent;
+  border: 1px solid rgba(255, 165, 0, 0.4);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: white;
+  cursor: default;
+  transition: all 0.25s ease;
+}
+
+.skill-list span:hover {
+  background: orange;
+  color: #020617;
+  border-color: orange;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.6);
+}
+
+/* ===================== PROJECTS SECTION ===================== */
+
+.projects {
+  padding: 100px 100px;
+  background: radial-gradient(circle at top, #020617, #000);
+}
+
+.projects-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===================== PROJECT CARD (CONSOLIDÉ) ===================== */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: #020617;
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* image inside project card */
+.project-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image img,
+.project-card .project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.06);
+}
+
+/* little decorative square in project image (animation renamed) */
+.project-image::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  bottom: 12px;
+  right: 12px;
+  border-radius: 6px;
+  animation: floatSquareImg 3s ease-in-out infinite;
+}
+
+/* ===================== PROJECT CONTENT ===================== */
+
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.project-content h3 {
+  font-size: 18px;
+  color: orange;
+}
+
+.project-content p {
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* ===================== PROJECT SKILLS ===================== */
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-skills span {
+  background: transparent;
+  border: 1px solid rgba(255, 165, 0, 0.4);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+.project-skills span:hover {
+  background: orange;
+  color: #020617;
+  border-color: orange;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.6);
+}
+
+/* ===================== PROJECT BUTTONS ===================== */
+
+.project-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ===================== BADGES HARMONISÉS ===================== */
+
+.badge.type.personal {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.badge.type.school {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+/* ===================== FILTER VISIBILITY FIX ===================== */
+
+.project-card.hidden {
+  display: none !important;
+}
+
+/* ===================== SCROLL ANIMATIONS (CONSOLIDÉ) ===================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== SCROLL FLUIDE ===================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================== TYPEWRITER ===================== */
+.hero-title,
+.hero-subtitle {
+  min-height: 1.5em;
+}
+
+/* ===================== NOM EN DÉGRADÉ ===================== */
+.name-gradient {
+  background: linear-gradient(135deg, #facc15, #f85523);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* ===================== PETIT CARRÉ ANIMÉ PROFIL ===================== */
+
+.profile-photo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.floating-square {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border: 4px solid orange;
+  border-radius: 10px;
+  bottom: -18px;
+  right: -18px;
+  background: rgba(255, 165, 0, 0.08);
+  animation: floatSquareProfile 5s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.55);
+}
+
+/* Animation du petit carré du profil */
+@keyframes floatSquareProfile {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-6px, -8px);
+  }
+  50% {
+    transform: translate(4px, -4px);
+  }
+  75% {
+    transform: translate(-4px, 6px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Animation pour le petit carré sur les images de projet (nom différent pour éviter conflit) */
+@keyframes floatSquareImg {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Responsive adjustments for the profile square and image */
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 340px;
+  }
+
+  .floating-square {
+    width: 62px;
+    height: 62px;
+    bottom: -14px;
+    right: -14px;
+  }
+}
+
+/* ===================== PROJECT FILTERS / BOUTONS (VERSION FINALE) ===================== */
+
+.project-filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #38bdf8;
+  background: transparent;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* ===================== EXPERIENCE SECTION ===================== */
+
+.experience {
+  padding: 100px 100px;
+  background: radial-gradient(circle at top, #020617, #000);
+}
+
+.experience-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ===================== TIMELINE ITEM ===================== */
+
+.experience-item {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: orange;
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 16px;
+  width: 18px;
+  height: 18px;
+  background: orange;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.7);
+  z-index: 2;
+}
+
+/* ===================== EXPERIENCE CARD ===================== */
+
+.experience-card {
+  background: #020617;
+  border: 1px solid rgba(255, 165, 0, 0.25);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  flex: 1;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 32px rgba(255, 165, 0, 0.35);
+}
+
+.experience-card h3 {
+  color: orange;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.experience-card h4 {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.experience-date {
+  display: inline-block;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.experience-card ul {
+  padding-left: 18px;
+}
+
+.experience-card li {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* ===================== CONTACT SECTION ===================== */
+
+.contact {
+  padding: 100px 100px;
+  background: radial-gradient(circle at top, #020617, #000);
+}
+
+.contact-intro {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+/* ===================== CONTACT CARD ===================== */
+
+.contact-card {
+  background: #020617;
+  border: 1px solid rgba(255, 165, 0, 0.25);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.35);
+}
+
+.contact-card i {
+  font-size: 22px;
+  color: orange;
+}
+
+.contact-card strong {
+  display: block;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.contact-card a,
+.contact-card p {
+  color: #cbd5e1;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: orange;
+}
+
+/* ===================== FOOTER ===================== */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #94a3b8;
+  font-size: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 1100px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero-image {
+    margin-top: 40px;
+  }
+
+  .welcome {
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-right {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .skills {
+    padding: 70px 20px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .experience {
+    padding: 70px 20px;
+  }
+
+  .experience-item {
+    gap: 18px;
+  }
+
+  .timeline {
+    width: 24px;
+  }
+
+  .timeline::before {
+    width: 3px;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact {
+    padding: 70px 20px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    padding: 70px 20px;
+  }
+}
+
+/* ===================== NAV MOBILE ===================== */
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .app-header nav {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #020617;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none; /* fermé par défaut */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .app-header nav.open {
+    display: flex;
+  }
+}
+
+section {
+  scroll-margin-top: 80px; /* adapte à la hauteur de ton header */
+}
